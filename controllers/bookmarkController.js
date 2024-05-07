@@ -25,7 +25,7 @@ module.exports = {
         const savedBookmark = await newBookmark.save();
         console.log('Bookmark saved: ', savedBookmark);
   
-        return res.status(200).json({ status: true, bookmarkId: savedBookmark._id });
+        res.status(200).json({ status: true, bookmarkId: savedBookmark._id });
       } catch (error) {
         console.error('Error in createBookmark: ', error);
         return res.status(500).json({ message: error.message });
@@ -34,12 +34,12 @@ module.exports = {
 
 
     deleteBookmark: async (req, res) => {
-      const bookmarkId = req.params.bookmarkId;
+      const bookmarkId = req.params.id;
     
       console.log('Received bookmarkId: ', bookmarkId); 
     
       try {
-        const deletedBookmark = await Bookmark.findByIdAndDelete(bookmarkId);
+        await Bookmark.findByIdAndDelete(bookmarkId);
     
         console.log('Deleted bookmark: ', deletedBookmark); 
     
