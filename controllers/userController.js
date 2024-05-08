@@ -16,6 +16,7 @@ module.exports = {
   deleteUser:async(req, res)=>{
     try{
       await User.findByIdAndDelete(req.user.id)
+      res.status(200).json({status:true}) 
     } catch (error){
       res.status(500).json({error:error})
     }
