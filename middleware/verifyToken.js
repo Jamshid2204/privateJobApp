@@ -13,7 +13,7 @@ const verifyToken = (req, res, next) => {
       next();
     });
   } else {
-    return res.status(401).json({ message: "Authorization header not found" });
+    return res.status(401).json({ message: "Authorization header not found 1" });
   }
 };
 
