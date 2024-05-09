@@ -17,7 +17,7 @@ admin.initializeApp({
 });
 
 mongoose.connect(process.env.MONGO_URL)
-    .then(() => console.log('connected to jobhub'))
+    .then(() => console.log('connected to jobfinderapp database'))
     .catch((err) => console.log(err));
 
 app.use(bodyParser.json());
