@@ -29,6 +29,6 @@ app.use('/api/bookmarks', bookmarkRouter);
 app.use('/api/', authRouter);
 app.use('/api/applied', require('./routes/apply'));
 
-app.get('/', (req, res) => res.send('Welcome to JobFinder app 1'))
+app.get('/', (req, res) => res.send('Welcome to JobFinder app 2'))
 
 app.listen(process.env.PORT || port, () => console.log(`sever is running on port ${process.env.PORT}`));
