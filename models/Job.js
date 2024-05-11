@@ -11,7 +11,7 @@ const JobSchema = new mongoose.Schema({
     contract: { type: String, required: true },
     hiring: { type: Boolean, required: true, default: true },
     period: { type: String, required: true },
-    imageUrl: { type: String, required: true },
+    imageUrl: { type: String, required: true, default: 'https://cdn-icons-png.flaticon.com/128/3985/3985018.png'},
     agentId: { type: String, required: true },
     requirements: {
         type: Array,
