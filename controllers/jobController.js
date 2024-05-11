@@ -73,7 +73,7 @@ module.exports = {
             const results = await Job.aggregate([
                 {
                     $search: {
-                        index: "jobsearch",
+                        index: "job_finder_search",
                         text: {
                             query: req.params.key,
                             path: {
