@@ -6,6 +6,7 @@ const JobSchema = new mongoose.Schema({
     company: { type: String, required: true },
     agentName: { type: String, required: true },
     description: { type: String, required: true },
+    category: { type: String, required: true },
     salary: { type: String, required: true },
     contract: { type: String, required: true },
     hiring: { type: Boolean, required: true, default: true },
