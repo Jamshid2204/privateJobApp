@@ -8,11 +8,11 @@ const UserSchema = new mongoose.Schema({
   location:{type:String, required: false},
   phone:{type:String, required: false},
   resume:{type:String, default: '', required: false},
-  updated:{type:Boolean, default: true},
+  updated:{type:Boolean, default: false},
   isAdmin:{type:Boolean, default: false},
   isAgent:{type:Boolean, default: false},
   skills:{type:Boolean, default: true, required:false},
-  profile:{type:String,required:true, default:"https://cdn.icon-icons.com/icons2/2699/PNG/512/google_logo_icon_169090.png"},
+  profile:{type:String,required:true, default:"https://cdn-icons-png.flaticon.com/128/1077/1077012.png"},
   
 },{timestamps : true});
 
