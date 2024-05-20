@@ -8,7 +8,7 @@ const UserSchema = new mongoose.Schema({
   location:{type:String, required: false},
   phone:{type:String, required: false},
   resume:{type:String, default: '', required: false},
-  updated:{type:Boolean, default: false},
+  updated:{type:Boolean, default: true},
   isAdmin:{type:Boolean, default: false},
   isAgent:{type:Boolean, default: false},
   skills:{type:Boolean, default: true, required:false},
