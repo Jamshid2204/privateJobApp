@@ -11,7 +11,7 @@ const UserSchema = new mongoose.Schema({
   updated:{type:Boolean, default: false},
   isAdmin:{type:Boolean, default: false},
   isAgent:{type:Boolean, default: false},
-  skills:{type:Boolean, default: false, required:false},
+  skills:{type:Boolean, default: true, required:false},
   profile:{type:String,required:true, default:"https://cdn.icon-icons.com/icons2/2699/PNG/512/google_logo_icon_169090.png"},
   
 },{timestamps : true});
