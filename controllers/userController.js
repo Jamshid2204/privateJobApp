@@ -83,7 +83,7 @@ module.exports = {
       hr_address:req.body.hr_address,
       company:req.body.company
     });
-    console.log(req.body.hr_address);
+    console.log("hr adress = " + req.body.hr_address);
     try{
       await newAgent.save();
       await User.findByIdAndUpdate(req.user.id, {$set:{agents:true}})
