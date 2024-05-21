@@ -13,7 +13,7 @@ module.exports = {
       res.status(500).json({error:error})
     }
   },
-  deleteUser:async(req, res)=>{
+  deleteUser: async (req, res)=>{
     try{
       await User.findByIdAndDelete(req.user.id)
       res.status(200).json({status:true}) 

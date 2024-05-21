@@ -29,10 +29,10 @@ module.exports = {
 
     deleteJob: async (req, res) => {
         const jobId = req.params.jobId;
-
+        console.log(jobId);
         try {
             await Job.findByIdAndDelete(jobId)
-            res.status(200).json({ status: true, message: 'Job deleted successfully' })
+            res.status(200).json({ status: true, message: 'Job deleted successfully1' })
         } catch (error) {
             res.status(500).json(error);
         }
