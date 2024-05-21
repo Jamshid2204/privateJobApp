@@ -29,6 +29,7 @@ module.exports = {
 
     deleteJob: async (req, res) => {
         const jobId = req.params.id;
+        console.log("deleted jobId = ");
         console.log(jobId);
         try {
             await Job.findByIdAndDelete(jobId)
