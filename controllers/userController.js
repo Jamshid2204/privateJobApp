@@ -75,7 +75,7 @@ module.exports = {
     }
   },
 
-  addAgent:async(req,res) =>{
+  addAgent: async (req,res) =>{
     const newAgent = new Agent({
       userId:req.user.id,
       uid:req.body.uid,
@@ -83,7 +83,7 @@ module.exports = {
       hr_address:req.body.hr_address,
       company:req.body.company
     });
-
+    console.log(req.body.hr_address);
     try{
       await newAgent.save();
       await User.findByIdAndUpdate(req.user.id, {$set:{agents:true}})
