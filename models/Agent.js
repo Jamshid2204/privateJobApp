@@ -5,7 +5,7 @@ const AgentSchema = new mongoose.Schema({
   userId:{type: String ,requrired:true},
   uid:{type: String ,requrired:true},
   company:{type: String ,requrired:true},
-  hq_address:{type: String ,requrired:true},
+  hr_address:{type: String ,requrired:true},
   working_hrs:{type: String ,requrired:true},
   
 
